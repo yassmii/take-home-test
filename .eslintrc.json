@@ -1,5 +1,6 @@
 {
     "env": {
+      "vitest": true,
       "node": true,                // Node.js global variables.
       "es2021": true               // Latest ECMAScript features.
     },
@@ -10,14 +11,15 @@
     },
     "extends": [
       "eslint:recommended",        // Use recommended ESLint rules.
-      "plugin:@typescript-eslint/recommended" // Add TypeScript-specific rules.
+      "plugin:@typescript-eslint/recommended", // Add TypeScript-specific rules.
+      "plugin:prettier/recommended"
     ],
     "plugins": ["@typescript-eslint"], // Enable the TypeScript plugin.
     "rules": {
       "semi": ["error", "always"],       // Enforce semicolons.
       "quotes": ["error", "single"],     // Enforce single quotes.
       "no-unused-vars": "off",          // Turn off, handled by TypeScript.
-      "@typescript-eslint/no-unused-vars": ["warn"], // Warn about unused vars.
+      "@typescript-eslint/no-unused-vars": "warn", // Warn about unused vars.
       "indent": ["error", 2],            // Enforce 2-space indentation.
       "comma-dangle": ["error", "never"] // No trailing commas.
     },
